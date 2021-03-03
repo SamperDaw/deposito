@@ -20,21 +20,24 @@ public class Refactorizacion {
 
     public static void operativa_cuenta(float cantidad) {
         // TODO code application logic here
-        CCuenta cuenta1;
+        CCuenta cuenta1,cuenta2;
         double saldoActual;
         
         cuenta1 = new CCuenta("Antonio López","10000-2365-85-1230456789",2500,0);
         saldoActual = cuenta1.estado();
         System.out.println("El saldo actual es"+ saldoActual);
-        
+        cuenta2 = new CCuenta("Antonio Perez","3000-6543-23-12345600343",3400,0);
+        System.out.println("El saldo actual es"+ saldoActual);
         try{
             cuenta1.retirar(2300);
+            cuenta2.retirar(2000);
         }catch (Exception e){
             System.out.println("Fallo al retirar");
         }
         try{
             System.out.println("Ingreso en cuenta");
             cuenta1.ingresar(695);
+            cuenta2.ingresar(300);
         }catch (Exception e){
             System.out.println("Fallo al ingresar");
         }
